@@ -1,0 +1,5 @@
+Host: '85.10.205.173'
+database username: 'quangsang'
+matkhau: 'sang2002'
+database name: db_app
+port: 3306

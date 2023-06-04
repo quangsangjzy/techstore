@@ -1,0 +1,614 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head2"><title>
+	Phần mềm quản lý đào tạo tín chỉ UniSoft - Thiên An
+</title><meta id="Meta1" name="KEYWORDS" content="Phần mềm quản lý đào tạo tín chỉ" /><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" /><link href="/css/UniPortal.css" rel="stylesheet" /><link href="/css/bootstrap.css" rel="stylesheet" /><link href="/css/head.css" rel="stylesheet" />
+     <script type="text/javascript">
+         function OpenWindows() {
+             var dsMa_sv;
+             var WinSettings = "center:yes;resizable:no;dialogWidth:800px;dialogHeight:500px;modal=yes"
+             // ALTER BELOW LINE - supply correct URL for Child Form
+             window.open("wfrmDangKyLopTinChiB3In.aspx", dsMa_sv, WinSettings);
+         }
+    </script>    
+</head>
+<body style="background-color:white">
+    <form name="form2" method="post" action="./wfrmDangKyLopTinChiB1.aspx" id="form2">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjA0NzcwMTE4D2QWAgIDD2QWDgIBD2QWAgIDD2QWBAIBDw8WAh4HVmlzaWJsZWhkZAIDDw8WAh8AZ2QWCAIDDxYCHgRUZXh0BRRQaOG6oW0gSMawxqFuZyBHaWFuZ2QCBQ8PFgQfAQUWSOG7mXAgdGjGsCA8Yj4oIDAgKTxiPh4LTmF2aWdhdGVVcmwFEU1lc3NhZ2VJbmJveC5hc3B4ZGQCBw8PFgIfAgUUL0NoYW5nZVBhc3N3b3JkLmFzcHhkZAIJDw8WAh8CBQwvbG9nb3V0LmFzcHhkZAIDD2QWBgIBDxYCHgNzcmMFHlxGaWxlQW5oU2luaFZpZW5cNzA1NjAxMTIzLnBuZ2QCAw8PFgIfAQUUUGjhuqFtIEjGsMahbmcgR2lhbmdkZAIFDw8WAh8BBQk3MDU2MDExMjNkZAIRDw8WAh8BBUVT4buRIHTDrW4gY2jhu4kgxJHEg25nIGvDvSB04buRaSB0aGnhu4N1IGzDoDogMCAoS2jDtG5nIGLhuq90IGJ14buZYylkZAITDw8WAh8BBVFT4buRIHTDrW4gY2jhu4kgxJHEg25nIGvDvSBo4buNYyB0aMaw4budbmcgdOG7kWkgxJFhIGzDoDogMCAoS2jDtG5nIGLhuq90IGJ14buZYylkZAIVDw8WAh8BBSRT4buRIGjhu41jIHBo4bqnbiDEkcOjIMSRxINuZyBrw706IDNkZAIXDw8WAh8BBSpU4buVbmcgc+G7kSB0w61uIGNo4buJIMSRw6MgxJHEg25nIGvDvTogMTBkZAIZDzwrABEDAA8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAIgZAEQFgZmAgICAwIEAgYCChYGPCsABQEAFgIeCkhlYWRlclRleHQFC0hQIG5nw6BuaCAyPCsABQEAFgIfBgUQTcOjIGjhu41jIHBo4bqnbjwrAAUBABYCHwYFEVTDqm4gaOG7jWMgcGjhuqduPCsABQEAFgIfBgUPU+G7kSB0w61uIGNo4buJPCsABQEAFgIfBgUWU+G7kSB0aeG7gW4gaOG7jWMgcGjDrTwrAAUBABYCHwYFDEPDsm4gdHLhu5FuZxYGZmZmZmZmDBQrAAAWAmYPZBZCAgEPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUCQitkZAICDw8WAh8BBQhQT0xJIDEwNmRkAgMPDxYCHwEFNENo4bunIG5naMSpYSB4JiMyMjc7IGjhu5lpIGtob2EgaOG7jWMgKFBPTEkgMTA2LUs3MilkZAIEDw8WAh8BBQEyZGQCBQ8PFgIfAQUBMGRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQFYZGQCCQ8PFgIfAQUGJm5ic3A7ZGQCCg8PFgIfAQUEMjY1MWRkAgsPZBYCAgMPDxYCHwEFBTM2NjM4ZGQCAg9kFhhmDw8WAh8BBQYmbmJzcDtkZAIBDw8WAh8BBQFCZGQCAg8PFgIfAQUIUEhJTCAxMjhkZAIDDw8WAh8BBUlE4bqrbiBsdeG6rW4gTk5IIHYmIzIyNDsgTmfhu68gJiMyMjY7bSBo4buNYyBUViAoUEhJTCAxMjgtSzcyIFbEg24gaOG7jWMpZGQCBA8PFgIfAQUBMmRkAgUPDxYCHwEFATBkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUBWGRkAgkPDxYCHwEFBiZuYnNwO2RkAgoPDxYCHwEFAjIwZGQCCw9kFgICAw8PFgIfAQUFMzY4ODBkZAIDD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFAUJkZAICDw8WAh8BBQhQSElMIDEyOGRkAgMPDxYCHwEFRUThuqtuIGx14bqtbiBOTkggdiYjMjI0OyBOZ+G7ryAmIzIyNjttIGjhu41jIFRWIChQSElMIDEyOC1LNzJTUCBWxINuKWRkAgQPDxYCHwEFATJkZAIFDw8WAh8BBQEwZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFAVhkZAIJDw8WAh8BBQYmbmJzcDtkZAIKDw8WAh8BBQMxNDJkZAILD2QWAgIDDw8WAh8BBQUzNjg3N2RkAgQPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUBQmRkAgIPDxYCHwEFCFBISUwgMTI4ZGQCAw8PFgIfAQVIROG6q24gbHXhuq1uIE5OSCB2JiMyMjQ7IE5n4buvICYjMjI2O20gaOG7jWMgVFYgKFBISUwgMTI4LUs3MlNQIFbEg25DTEMpZGQCBA8PFgIfAQUBMmRkAgUPDxYCHwEFATBkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUBWGRkAgkPDxYCHwEFBiZuYnNwO2RkAgoPDxYCHwEFAjE0ZGQCCw9kFgICAw8PFgIfAQUFMzY4NzhkZAIFD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFAkIrZGQCAg8PFgIfAQUIQ09NTSAwMDVkZAIDDw8WAh8BBTjEkCYjMjI1O25oIGdpJiMyMjU7IHRyb25nIGdpJiMyMjU7byBk4bulYyAoQ09NTSAwMDUtSzcwKWRkAgQPDxYCHwEFATJkZAIFDw8WAh8BBQExZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFS1Rpw6puIHF1eeG6v3QgOiBHacOhbyBk4bulYyBo4buNYzxicj5UacOqbiBxdXnhur90IDogTMO9IGx14bqtbiBk4bqheSBo4buNY2RkAggPDxYCHwEFAVhkZAIJDw8WAh8BBQYmbmJzcDtkZAIKDw8WAh8BBQI1NWRkAgsPZBYCAgMPDxYCHwEFBTM2OTI0ZGQCBg9kFhhmDw8WAh8BBQYmbmJzcDtkZAIBDw8WAh8BBQYmbmJzcDtkZAICDw8WAh8BBQpQSFlFIDI1MEJDZGQCAw8PFgIfAQVER2kmIzIyNTtvIGThu6VjIHRo4buDIGNo4bqldCAzIChCJiMyNDM7bmcgY2h1eeG7gW4pIChQSFlFIDI1MEJDLUs3MilkZAIEDw8WAh8BBQExZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQYmbmJzcDtkZAIJDw8WAh8BBQFYZGQCCg8PFgIfAQUDMjg0ZGQCCw9kFgICAw8PFgIfAQUFMzY2NDFkZAIHD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFBiZuYnNwO2RkAgIPDxYCHwEFClBIWUUgMjUwQkRkZAIDDw8WAh8BBURHaSYjMjI1O28gZOG7pWMgdGjhu4MgY2jhuqV0IDMgKEImIzI0MztuZyDEkSYjMjI1OykgKFBIWUUgMjUwQkQtSzcyKWRkAgQPDxYCHwEFATFkZAIFDw8WAh8BBQExZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFBiZuYnNwO2RkAgkPDxYCHwEFAVhkZAIKDw8WAh8BBQI1NmRkAgsPZBYCAgMPDxYCHwEFBTM2NjQyZGQCCA9kFhhmDw8WAh8BBQYmbmJzcDtkZAIBDw8WAh8BBQYmbmJzcDtkZAICDw8WAh8BBQpQSFlFIDI1MEJSZGQCAw8PFgIfAQVAR2kmIzIyNTtvIGThu6VjIHRo4buDIGNo4bqldCAzIChCJiMyNDM7bmcgcuG7lSkgKFBIWUUgMjUwQlItSzcyKWRkAgQPDxYCHwEFATFkZAIFDw8WAh8BBQExZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFBiZuYnNwO2RkAgkPDxYCHwEFAVhkZAIKDw8WAh8BBQI2NmRkAgsPZBYCAgMPDxYCHwEFBTM2NjQ0ZGQCCQ9kFhhmDw8WAh8BBQYmbmJzcDtkZAIBDw8WAh8BBQYmbmJzcDtkZAICDw8WAh8BBQpQSFlFIDI1MENMZGQCAw8PFgIfAQVBR2kmIzIyNTtvIGThu6VjIHRo4buDIGNo4bqldCAzIChD4bqndSBsJiMyNDQ7bmcpIChQSFlFIDI1MENMLUs3MilkZAIEDw8WAh8BBQExZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQYmbmJzcDtkZAIJDw8WAh8BBQFYZGQCCg8PFgIfAQUDMTc4ZGQCCw9kFgICAw8PFgIfAQUFMzY2NDVkZAIKD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFBiZuYnNwO2RkAgIPDxYCHwEFC1BIWUUgMjUwxJBDZGQCAw8PFgIfAQVBR2kmIzIyNTtvIGThu6VjIHRo4buDIGNo4bqldCAzICjEkCYjMjI1OyBj4bqndSkgKFBIWUUgMjUwxJBDLUs3MilkZAIEDw8WAh8BBQExZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQYmbmJzcDtkZAIJDw8WAh8BBQFYZGQCCg8PFgIfAQUCNjJkZAILD2QWAgIDDw8WAh8BBQUzNjY0NmRkAgsPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQULUEhZRSAyNTDEkEtkZAIDDw8WAh8BBT9HaSYjMjI1O28gZOG7pWMgdGjhu4MgY2jhuqV0IDMgKMSQaeG7gW4ga2luaCkgKFBIWUUgMjUwxJBLLUs3MilkZAIEDw8WAh8BBQExZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQYmbmJzcDtkZAIJDw8WAh8BBQFYZGQCCg8PFgIfAQUDMTM4ZGQCCw9kFgICAw8PFgIfAQUFMzY2NDdkZAIMD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFBiZuYnNwO2RkAgIPDxYCHwEFClBIWUUgMjUwS1ZkZAIDDw8WAh8BBUBHaSYjMjI1O28gZOG7pWMgdGjhu4MgY2jhuqV0IDMgKEtoaSYjMjM0O3UgdsWpKSAoUEhZRSAyNTBLVi1LNzIpZGQCBA8PFgIfAQUBMWRkAgUPDxYCHwEFATFkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUGJm5ic3A7ZGQCCQ8PFgIfAQUBWGRkAgoPDxYCHwEFAjc3ZGQCCw9kFgICAw8PFgIfAQUFMzY2NDhkZAIND2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFAUJkZAICDw8WAh8BBQpQSFlFIDI1MFREZGQCAw8PFgIfAQVMR2kmIzIyNTtvIGThu6VjIHRo4buDIGNo4bqldCAzIChUaOG7gyBk4bulYyBuaOG7i3AgxJFp4buHdSkgKFBIWUUgMjUwVEQtSzcyKWRkAgQPDxYCHwEFATFkZAIFDw8WAh8BBQExZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFBiZuYnNwO2RkAgkPDxYCHwEFAVhkZAIKDw8WAh8BBQMyOTNkZAILD2QWAgIDDw8WAh8BBQUzNjY0OWRkAg4PZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQUJUEhZRSAyNTBWZGQCAw8PFgIfAQVAR2kmIzIyNTtvIGThu6VjIHRo4buDIGNo4bqldCAzIChWJiMyNDU7IHRodeG6rXQpIChQSFlFIDI1MFYtSzcyKWRkAgQPDxYCHwEFATFkZAIFDw8WAh8BBQExZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFBiZuYnNwO2RkAgkPDxYCHwEFAVhkZAIKDw8WAh8BBQI1N2RkAgsPZBYCAgMPDxYCHwEFBTM2NjUwZGQCDw9kFhhmDw8WAh8BBQYmbmJzcDtkZAIBDw8WAh8BBQJCK2RkAgIPDxYCHwEFCFBPTEkgMjA0ZGQCAw8PFgIfAQU6TOG7i2NoIHPhu60gxJDhuqNuZyBD4buZbmcgc+G6o24gVmnhu4d0IE5hbSAoUE9MSSAyMDQtSzcyKWRkAgQPDxYCHwEFATJkZAIFDw8WAh8BBQEwZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFAVhkZAIJDw8WAh8BBQYmbmJzcDtkZAIKDw8WAh8BBQMzMjFkZAILD2QWAgIDDw8WAh8BBQUzNjYzOWRkAhAPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUBQ2RkAgIPDxYCHwEFCENPTU0gMTEwZGQCAw8PFgIfAQU0TOG7i2NoIHPhu60gdsSDbiBtaW5oIHRo4bq/IGdp4bubaSAoQ09NTSAxMTAtSzcyLDcwKWRkAgQPDxYCHwEFATJkZAIFDw8WAh8BBQEwZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFAVhkZAIJDw8WAh8BBQYmbmJzcDtkZAIKDw8WAh8BBQEyZGQCCw9kFgICAw8PFgIfAQUFMzcwMTZkZAIRD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFAkQrZGQCAg8PFgIfAQUJUEhJTCAyMjFOZGQCAw8PFgIfAQVETmjhuq1wIG0mIzI0NDtuIEwmIzIzNzsgbHXhuq1uIHbEg24gaOG7jWMgKFBISUwgMjIxTi1LNzIgVsSDbiBo4buNYylkZAIEDw8WAh8BBQEyZGQCBQ8PFgIfAQUBMGRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQFYZGQCCQ8PFgIfAQUGJm5ic3A7ZGQCCg8PFgIfAQUCMzNkZAILD2QWAgIDDw8WAh8BBQUzNjg4MWRkAhIPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQUIQ09NTSAwMDRkZAIDDw8WAh8BBUdQaCYjMjI1O3QgdHJp4buDbiBjaMawxqFuZyB0ciYjMjM2O25oIG5oJiMyMjQ7IHRyxrDhu51uZyAoQ09NTSAwMDQtSzcwKWRkAgQPDxYCHwEFATJkZAIFDw8WAh8BBQExZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFIVRpw6puIHF1eeG6v3QgOiBHacOhbyBk4bulYyBo4buNY2RkAggPDxYCHwEFAVhkZAIJDw8WAh8BBQYmbmJzcDtkZAIKDw8WAh8BBQQyMDgxZGQCCw9kFgICAw8PFgIfAQUFMzY2MzVkZAITD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFAUJkZAICDw8WAh8BBQhDT01NIDAwMWRkAgMPDxYCHwEFOVImIzIzMjtuIGx1eeG7h24gTlZTUCB0aMaw4budbmcgeHV5JiMyMzQ7biAoQ09NTSAwMDEtSzcyKWRkAgQPDxYCHwEFATNkZAIFDw8WAh8BBQEwZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFAVhkZAIJDw8WAh8BBQYmbmJzcDtkZAIKDw8WAh8BBQMxMzFkZAILD2QWAgIDDw8WAh8BBQUzNjY1NmRkAhQPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUCQitkZAICDw8WAh8BBQhQU1lDIDEwMWRkAgMPDxYCHwEFNVQmIzIyNjttIGwmIzIzNzsgaOG7jWMgZ2kmIzIyNTtvIGThu6VjIChQU1lDIDEwMS1LNzApZGQCBA8PFgIfAQUBNGRkAgUPDxYCHwEFATFkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUBWGRkAgkPDxYCHwEFBiZuYnNwO2RkAgoPDxYCHwEFAzExNGRkAgsPZBYCAgMPDxYCHwEFBTM3MDQ3ZGQCFQ9kFhhmDw8WAh8BBQYmbmJzcDtkZAIBDw8WAh8BBQJDK2RkAgIPDxYCHwEFCE1BVEggMTM3ZGQCAw8PFgIfAQUyVGjhu5FuZyBrJiMyMzQ7IHgmIzIyNzsgaOG7mWkgaOG7jWMgKE1BVEggMTM3LUs3MClkZAIEDw8WAh8BBQEyZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQFYZGQCCQ8PFgIfAQUGJm5ic3A7ZGQCCg8PFgIfAQUCNzFkZAILD2QWAgIDDw8WAh8BBQUzNzA0MGRkAhYPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQUJUEhJTCAzMTZOZGQCAw8PFgIfAQUzVGnhur9uIHRyJiMyMzY7bmggdsSDbiBo4buNYyAoUEhJTCAzMTZOLUs3MFNQIFbEg24pZGQCBA8PFgIfAQUBM2RkAgUPDxYCHwEFATFkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUBWGRkAgkPDxYCHwEFBiZuYnNwO2RkAgoPDxYCHwEFAjE4ZGQCCw9kFgICAw8PFgIfAQUFMzY4NjlkZAIXD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFBiZuYnNwO2RkAgIPDxYCHwEFCEVOR0wgMTA1ZGQCAw8PFgIfAQUfVGnhur9uZyBBbmggMi1BMSAoRU5HTCAxMDUtSzcyKWRkAgQPDxYCHwEFATNkZAIFDw8WAh8BBQEwZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFBiZuYnNwO2RkAgkPDxYCHwEFAVhkZAIKDw8WAh8BBQM5MDBkZAILD2QWAgIDDw8WAh8BBQUzNjY2M2RkAhgPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQUIRU5HTCAxMDZkZAIDDw8WAh8BBR9UaeG6v25nIEFuaCAyLUEyIChFTkdMIDEwNi1LNzIpZGQCBA8PFgIfAQUBM2RkAgUPDxYCHwEFATBkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUGJm5ic3A7ZGQCCQ8PFgIfAQUBWGRkAgoPDxYCHwEFAzQ0MWRkAgsPZBYCAgMPDxYCHwEFBTM2NjY0ZGQCGQ9kFhhmDw8WAh8BBQYmbmJzcDtkZAIBDw8WAh8BBQYmbmJzcDtkZAICDw8WAh8BBQhSVVNTIDEwNmRkAgMPDxYCHwEFHFRp4bq/bmcgTmdhIDIgKFJVU1MgMTA2LUs3MilkZAIEDw8WAh8BBQEzZGQCBQ8PFgIfAQUBMGRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQYmbmJzcDtkZAIJDw8WAh8BBQFYZGQCCg8PFgIfAQUCNTBkZAILD2QWAgIDDw8WAh8BBQUzNjY1OWRkAhoPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQUIRlJFTiAxMDZkZAIDDw8WAh8BBSJUaeG6v25nIFBoJiMyMjU7cCAyIChGUkVOIDEwNi1LNzIpZGQCBA8PFgIfAQUBM2RkAgUPDxYCHwEFATBkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUGJm5ic3A7ZGQCCQ8PFgIfAQUBWGRkAgoPDxYCHwEFAjkyZGQCCw9kFgICAw8PFgIfAQUFMzY2NThkZAIbD2QWGGYPDxYCHwEFBiZuYnNwO2RkAgEPDxYCHwEFAUJkZAICDw8WAh8BBQhDSElOIDEwNmRkAgMPDxYCHwEFHlRp4bq/bmcgVHJ1bmcgMiAoQ0hJTiAxMDYtSzcyKWRkAgQPDxYCHwEFATNkZAIFDw8WAh8BBQEwZGQCBg8PFgIfAQUBMGRkAgcPDxYCHwEFBiZuYnNwO2RkAggPDxYCHwEFBiZuYnNwO2RkAgkPDxYCHwEFAVhkZAIKDw8WAh8BBQM5MjJkZAILD2QWAgIDDw8WAh8BBQUzNjY1N2RkAhwPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUBQ2RkAgIPDxYCHwEFCENPTVAgMTAzZGQCAw8PFgIfAQUnVGluIGjhu41jIMSR4bqhaSBjxrDGoW5nIChDT01QIDEwMy1LNzIpZGQCBA8PFgIfAQUBMmRkAgUPDxYCHwEFATBkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUGJm5ic3A7ZGQCCQ8PFgIfAQUBWGRkAgoPDxYCHwEFBDExNDBkZAILD2QWAgIDDw8WAh8BBQUzNjY1MWRkAh0PZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQUIUEhJTCAzMDlkZAIDDw8WAh8BBUBUcuG6o2kgbmdoaeG7h20gaG/huqF0IMSR4buZbmcgZOG6oXkgaOG7jWMgKFBISUwgMzA5LUs3MFNQIFbEg24pZGQCBA8PFgIfAQUBM2RkAgUPDxYCHwEFATFkZAIGDw8WAh8BBQEwZGQCBw8PFgIfAQUGJm5ic3A7ZGQCCA8PFgIfAQUBWGRkAgkPDxYCHwEFBiZuYnNwO2RkAgoPDxYCHwEFATBkZAILD2QWAgIDDw8WAh8BBQUzNjg2OGRkAh4PZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUCQitkZAICDw8WAh8BBQhQT0xJIDIwMmRkAgMPDxYCHwEFLlTGsCB0xrDhu59uZyBI4buTIENoJiMyMzc7IE1pbmggKFBPTEkgMjAyLUs3MClkZAIEDw8WAh8BBQEyZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQFYZGQCCQ8PFgIfAQUGJm5ic3A7ZGQCCg8PFgIfAQUCNTBkZAILD2QWAgIDDw8WAh8BBQUzNzA1MWRkAh8PZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUGJm5ic3A7ZGQCAg8PFgIfAQUJUEhJTCAzMDZOZGQCAw8PFgIfAQVfVsSDbiBo4buNYyBWaeG7h3QgTmFtIHThu6sgc2F1IEMmIzIyNTtjaCBt4bqhbmcgdGgmIzIyNTtuZyBUJiMyMjU7bSAxOTQ1IChQSElMIDMwNk4tSzcwU1AgVsSDbilkZAIEDw8WAh8BBQE0ZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQFYZGQCCQ8PFgIfAQUGJm5ic3A7ZGQCCg8PFgIfAQUCMTNkZAILD2QWAgIDDw8WAh8BBQUzNjg2N2RkAiAPZBYYZg8PFgIfAQUGJm5ic3A7ZGQCAQ8PFgIfAQUCQitkZAICDw8WAh8BBQhDT01NIDEwOWRkAgMPDxYCHwEFMVgmIzIyNzsgaOG7mWkgaOG7jWMgxJHhuqFpIGPGsMahbmcgKENPTU0gMTA5LUs3MClkZAIEDw8WAh8BBQEyZGQCBQ8PFgIfAQUBMWRkAgYPDxYCHwEFATBkZAIHDw8WAh8BBQYmbmJzcDtkZAIIDw8WAh8BBQFYZGQCCQ8PFgIfAQUGJm5ic3A7ZGQCCg8PFgIfAQUDMTcyZGQCCw9kFgICAw8PFgIfAQUFMzcwNjFkZAIhDw8WAh8AaGRkGAIFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYgBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDAyJGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwwMyRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMDQkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDA1JGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwwNiRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMDckY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDA4JGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwwOSRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMTAkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDExJGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwxMiRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMTMkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDE0JGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwxNSRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMTYkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDE3JGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwxOCRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMTkkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDIwJGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwyMSRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMjIkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDIzJGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwyNCRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMjUkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDI2JGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwyNyRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMjgkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDI5JGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwzMCRjaGsFGmdyZFZpZXdNb25EYW5nS3kkY3RsMzEkY2hrBRpncmRWaWV3TW9uRGFuZ0t5JGN0bDMyJGNoawUaZ3JkVmlld01vbkRhbmdLeSRjdGwzMyRjaGsFEGdyZFZpZXdNb25EYW5nS3kPPCsADAEIAgFkVQZ8v4GwPmrIDk7/Om+Ce31BylyM1coc7Ft1bnfn1jY=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form2'];
+if (!theForm) {
+    theForm = document.form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=752NzQp2fOioh470QIJrXfzKRd_H_T4DbFTsHqkziDUdQPY6zZjLACVr9QKTyymH2QT1XsdAZ74p9lxOaGzOy1xt06hU5a1KtWWSE4aqrQo1&amp;t=636726176369752514" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=0jZeo8TeTMdH2g8AsdGCMqqtpbvwig44HeOwIoKxbrhAaUUa_JY9ArzX3l4NV2rSHDS7XqnZyLKUx-epgQhIFk9AElHOdheUlg_0JbZeVG3IiuSKdIDiOamdYV-OU7Lm-qCxtdKWbGJc4jWE2NNsnamcekWsd-XHe32ItWYgx6fO5wKUV_x0aJh4wGqswWAA0&amp;t=ffffffffacced670" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=-AJEos0T4oUiK_avZJnFHhfYeSPTB-F1RxaJB6v4g6INid1VYRqXlGxaGMFsBEivOPYRZHC00kft68vPgnT7vJWkhRdTJek7gEz5OhEbkFmIVuD58zhu2w-ZuzudL5K7zqqTbo6i8Ij3L15WVSQOKONHWo2x53EGEQu2UFQn_w1gzkVUCiX1yFbCi05jps_50&amp;t=ffffffffacced670" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D45DCAD" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACO8wjEC0JaWPPNrr1fWgsOJI7tNhZCQl7Hbevlke6ol5qDuTIT6MXlsixISkGJipEsDSAwp5SwMrjoo3BWgsgOqsoEGttWZ3c+pBfBTDhbOPbEeETKtbgTZaEU+jZ6mffD+Hx9jUwUajU4fqIWv3PYn7a6xw58V0o6Cd2o7X4sy68gChVVgr1e4EMW5dU0PhL3IaL+nVTkg72f0AZP5qcdSEyYNV8PVMg81rgfxJA2GHWIkxvMdKvQcNk3E6gcKN7QXaZyHG4pD0WzzK0FydeY60OZf35FLYfw8LcY4BlFM9ycBsKR8zfVfBsbN2hzz6FnbWWdk7vjUveBC09KtaycPw760iZV6yRg+90Ay9ML7m0yGSZ5FpxyJJLzN5GqNQYQsl6WLW8hGxB6dV9AYoXOGI8dN2S/x6eoVAr2Nb8DnIZn9St/bduG8XykH2OXTM4/eDv5/fqUrjgKYEmcO8h2fFu1SCbLbJi8h+q1CWOlqXzW9nV4YLaQHBxBXUnTwc5SfXQp+9QbcrsOGPfM4Gje7kFQYGyMLhleyO4xgFmo5y8x4flamNPkKy4nUv8t6UnxyxNgBc718cN/1Uh9ajQ+/DWOW/+Ud4iQTBYWKdnHwhFCyG7MiYDEIhH/eQoWP4Xfk7xB5aCaOCwEQSWrKUIoHnWgS4hCcO9jmOHx/kRNwOdmBnDSzf/wTH+EbUS8yujDxg0xkm/0QplUzONdFkG0Hz50DITN2SqMVbztcdt6HlCHcZ/20YFN8w9FV0D8oZRTfVX8yr+v8lkeoU2GpM2D2" />
+</div>         
+       <div id="siteWrapper">
+            <div class="row">
+                
+<div id="header">
+<div class="top-head cb">
+    <div class="container">
+        <a id="right-menu" class="active iconmenu" href="#sidr-right"></a>
+        <div id="logo" class="logo">
+            <div id="HeaderSV_logopane">
+                <div class="khungAnh"><a class="khungAnhCrop0" href="#" title=""><img src="/Images/banner_left.png" /> </a></div>
+            </div>
+        </div>
+        <div class="bg-menu-top"  id="menuright">
+            <ul class="menu">
+                 
+<div >
+
+    <div id="HeaderSV_LoginPanel2_pnlLogout" class="cssLogin">
+	
+     <b> |</b>
+    <a id="HeaderSV_LoginPanel2_lnkMessageInbox" href="forum/MessageInbox.aspx">Hộp thư <b>( 0 )<b></a> |
+    <a id="HeaderSV_LoginPanel2_lnkChangePassWord" href="/ChangePassword.aspx">Đổi mật khẩu</a> | 
+    <a id="HeaderSV_LoginPanel2_lnkLogout" href="/logout.aspx">Đăng xuất</a>
+</div>
+    </div>
+			</ul>
+        </div>
+    </div>
+</div>
+
+<div>
+	<div>
+        <div id="navigation" style="width: 100%">                
+            <ul style="width:100%" >
+                <li><a href="/SinhVien.aspx" id="Home"><i class="glyphicon glyphicon-home" style="padding-right:5px"></i>TRANG CHỦ</a></li>              
+                <li><a href="/help/HuongDanSuDungDangKyHoc.htm" target="_blank" id="DangKy"><i class="glyphicon glyphicon-question-sign" style="padding-right:5px"></i><span>HƯỚNG DẪN ĐĂNG KÝ</span></a></li>       
+                <li><a href="/Forum/Forumhome.aspx" id="A2" target="_blank"><i class="glyphicon glyphicon-user" style="padding-right:5px"></i><span>DIỄN ĐÀN</span></a></li>	
+            </ul>                
+        </div>
+	</div>
+</div>
+</div>
+
+            </div>
+             <div class="row">
+                    <div class="col-md-2">
+   
+<style media="screen" type="text/css">
+    .thumbnail {
+    display: block;
+    padding: 2px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    text-align: left;
+    background-color: #fff;
+    border: 0px solid;
+    border-radius: 0px;
+    height:100%;
+}
+body{
+   background-color:#f2f2f2;
+}
+
+/* Profile container */
+.profile {
+  /*margin: 2px 0px 0px 0px;*/
+  background-color:#f2f2f2;
+  height:100%;
+}
+
+/* Profile sidebar */
+.profile-sidebar {  
+  padding: 2px 0 2px 0;
+ /*background-color:#f2f2f2;*/
+ /*height:100%;*/
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;  
+  width: 100px;
+  height: 120px;   
+  padding-top:5px;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.profile-usertitle-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 4px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 4px;
+  /*background-color:#f2f2f2;*/
+  /*height:100%;*/
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+ 
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #444444;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+    line-height: 1.5em;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #29a329;
+  color: #ffffff;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #ffffff;
+  background-color: #29a329;
+  border-left: 2px solid #5b9bd1;
+ /*margin-right: 8px;*/
+}
+
+/* Profile Content */
+.profile-content {
+  /*padding: 10px;
+  background: #fff;
+  min-height: 460px;*/
+}
+
+</style>
+
+<div class="thumbnail1">
+    <div class="row profile">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic" style ="text-align:center">					
+                    <a href="/UpdateThongTinCaNhan.aspx"><img src="\FileAnhSinhVien\705601123.png" id="nav1_image_ulr" /></a>
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-job">
+						<span id="nav1_lblHo_ten">Phạm Hương Giang</span>
+					</div>
+					<div class="profile-usertitle-job">
+						<span id="nav1_lblMa_sv">705601123</span>
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+                
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+                        <li>
+                            <a href="/wfrmHoSoSinhVien.aspx" id="A4"><i class="glyphicon glyphicon-user"></i>SƠ YẾU LÝ LỊCH</a>
+						</li>
+						<li>
+                            <a href="/ChuongTrinhDaoTaoSinhVien.aspx" id="CTDT"><i class="glyphicon glyphicon-list-alt"></i>CHƯƠNG TRÌNH ĐÀOTẠO</a>
+						</li>
+                        <li>
+                            <a href="/KetQuaXulyHocvu.aspx" id="A2"><i class="glyphicon glyphicon-alert"></i>CẢNH BÁO HỌC VỤ</a>
+						</li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/wfrmDangKyLopTinChiB1.aspx?Chuyen_nganh=1" id="DangKy"><i class="glyphicon glyphicon-tags"></i>ĐĂNG KÝ HỌC<span class="caret"></span></a> 
+                            <ul class="nav1">
+                                <li><a href="/wfrmDangKyLopTinChiB1.aspx" id="A7"><i class="glyphicon glyphicon-plus"></i>Đăng ký môn học tín chỉ</a></li>
+                                <li><a href="/wfrmDangKyLopTinChiB1.aspx?Dang_ky_hoc_lai_cai_thien_diem=1" id="A12"><i class="glyphicon glyphicon-off"></i>Đ.Ký học lại & cải thiện</a> </li>
+                                 <li><a href="/wfrmDangKyThiCaiThienDiem.aspx?Chuyen_nganh=1" id="A6"><i class="glyphicon glyphicon-ok"></i>Đ.ký thi cải thiên điểm</a> </li>
+                                <li><a href="/KetQuaDangKy.aspx" id="A9"><i class="glyphicon glyphicon-th-list"></i>Lớp học phần đã đ.ký</a></li>
+                                 <li><a href="/wfrmDangKyHocNganh2.aspx" id="A8"><i class="glyphicon glyphicon-pencil"></i>Đăng ký học ngành 2</a></li>	   
+                                <li><a href="/wfrmDangKyXetTotNghiep.aspx" id="A14"><i class="glyphicon glyphicon-pencil"></i>Đăng ký xét tốt nghiệp</a></li>                             
+                                <li><a href="/wfrmDangKyHoTroHocPhi.aspx" id="A16"><i class="glyphicon glyphicon-pencil"></i>Đăng ký hỗ trợ học phí & SHP của SVSP</a></li>                             
+                            </ul>	
+                        </li>
+                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/HocPhiThanhToanTrucTuyen.aspx" id="HOCPHI_THANHTOAN"><i class="glyphicon glyphicon-shopping-cart"></i>THANH TOÁN HỌC PHÍ<span class="caret"></span></a> 
+                           <ul class="nav1">                    
+                                <li><a href="/HocPhiThanhToanTrucTuyen.aspx" id="HOCPHI_THANHTOAN2"><i class="glyphicon glyphicon-phone"></i>Thanh toán Online</a></li>
+                                <li><a href="/HocPhiLichSuGiaoDich.aspx" id="HOCPHI_LICHSUGIAODICH"><i class="glyphicon glyphicon-dashboard"></i>Lịch sử giao dịch</a></li>	                                
+                            </ul>	
+                        </li>
+                         <li>
+                             <a href="/ThongTinTaiChinh.aspx" id="A3"><i class="glyphicon glyphicon-usd"></i>XEM HỌC PHÍ</a>
+						</li>
+                        <li>
+                            <a href="/wfrmDangKyLopTinChiB3.aspx" id="LichHoc"><i class="glyphicon glyphicon-calendar"></i>XEM LỊCH HỌC</a>
+						</li>
+                         <li>
+                             <a href="/ThongTinLichThi.aspx" id="LichThi"><i class="glyphicon glyphicon-file"></i>XEM LỊCH THI</a>
+						</li>
+                        <li>
+                            <a href="/KetQuaHocTap.aspx" id="A1"><i class="glyphicon glyphicon-heart"></i>XEM ĐIỂM HỌC TẬP</a>
+						</li>
+                        <li>
+                            <a href="/KetQuaRenLuyen.aspx" id="A5"><i class="glyphicon glyphicon-pencil"></i>XEM ĐIỂM RÈN LUYỆN</a>
+						</li>
+                        <li>
+                            <a href="/ThongTinKhenThuongKyLuatHocBong.aspx" id="A15"><i class="glyphicon glyphicon-screenshot"></i>XEM KHEN THƯỞNG, KỶ LUẬT</a>
+						</li>
+                        <li>
+                            <a href="http://localhost:91/Students/danhgia"  id="A11"><i class="glyphicon glyphicon-ok-sign"></i>ĐÁNH GIÁ GIẢNG VIÊN</a>
+						</li>
+                         <li>
+                         <a href="/GuiYkien.aspx"  id="A10"><i class="glyphicon glyphicon-send"></i>GỬI Ý KIẾN</a>
+						</li>
+                        <li><a href="/UpdateThongTinCaNhan.aspx"  id="A13"><i class="glyphicon glyphicon-save"></i>SỬA TT CÁ NHÂN</a></li>    
+						
+						<li><a href="/wfrmDangKyDichVuOnline.aspx"  id="A1331"><i class="glyphicon glyphicon-fire"></i>ĐĂNG KÝ DỊCH VỤ ONLINE</a></li>
+                        <li><a href="/DiemDanhTrenLopSinhVien.aspx"  id="A131"><i class="glyphicon glyphicon-ok"></i>XEM ĐIỂM DANH ONLINE</a></li>
+                        <li><a href="/ThongTinThucTapTotNghiep.aspx"  id="ThucTap"><i class="glyphicon glyphicon-fire"></i>XEM THÔNG TIN THỰC TẬP</a></li>
+                       	
+                     
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>		
+</div>
+<script type="text/javascript">
+
+    //$(document).ready(function () {
+    //    var string = document.location.pathname.replace('/Package Name/', '');
+    //    $('ul.nav > li > a[href="' + string + '"]').parent().addClass('active');
+    //});
+    //$(document).ready(function () {
+    //    $('.nav li a').click(function (e) {
+
+    //        $('.nav li.active').removeClass('active');
+
+    //        var $parent = $(this).parent();
+    //        $parent.addClass('active');
+    //        //e.preventDefault();
+    //            var url = window.location;
+    //            // Will only work if string in href matches with location
+    //            $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+    //    });
+    //});
+    //$(document).ready(function () {
+    //    var url = window.location;
+    //    // Will only work if string in href matches with location
+    //    $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+
+    //    // Will also work for relative and absolute hrefs
+    //    $('ul.nav a').filter(function () {
+    //        return this.href == url;
+    //    }).parent().addClass('active').parent().parent().addClass('active');
+    //});
+</script>
+
+
+</div>
+                    <div class="col-md-10" style="background-color:white">
+                      <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+                        <tr>
+                            <td style="width: 100%">            
+                            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form2', [], [], [], 90, '');
+//]]>
+</script>
+        
+                            <table style="width: 100%" border ="0" cellpadding="0" cellspacing="0">  
+                        <tr>
+                            <td align="center" colspan="3">
+                                <span id="lblThoi_gian_dang_ky" style="color:Red;font-family:Arial;font-size:Larger;font-weight:bold;">Đăng ký lần 1: Từ ngày 05/05/2023 22:00 đến ngày 17/05/2023 23:00 (Bạn còn 5 ngày 3 giờ 1 phút  đăng ký)</span></td>
+                        </tr>
+                        <tr style="font-size: 10pt; color: #000000">
+                         <td align="left" valign="bottom"  >
+                            <button class="btn btn-success"  onclick="OpenWindows()" type="button"><span id="Label2">In kết quả đã đăng ký</span></button></td>
+                            <td align="center">
+                                <span id="lblThong_bao" style="color:Green;font-family:Arial;font-size:Larger;font-weight:bold;"></span>
+                                
+                               </td>                   
+                            <td align="right">
+                                &nbsp;<input type="submit" name="cmdDangKyLop1" value="Đăng ký lớp tín chỉ" id="cmdDangKyLop1" class="btn btn-success" />
+                            </td>
+                        </tr>         
+                        <tr style="font-size: 10pt">
+                            <td style="width: 100%; height: 100%" colspan = 3 >
+                                <table border="0" cellpadding="1" cellspacing="1" style="width: 100%" bgcolor="#336699">                     
+                                    <tr>
+                                        <td style="width: 35%; height: 100%" align="left" >
+                                            <span id="lblSo_tin_chi_min" style="font-size:Small;font-weight:bold;">Số tín chỉ đăng ký tối thiểu là: 0 (Không bắt buộc)</span><strong></strong></td>
+                                        <td style="width: 35%; height: 100%" align="center" >
+                                            <strong>
+                                                </strong></td>
+                                        <td style="width: 30%; height: 100%" align="right">
+                                            <span id="lblSo_tin_chi_max" style="font-size:Small;font-weight:bold;">Số tín chỉ đăng ký học thường tối đa là: 0 (Không bắt buộc)</span></td>
+                                    </tr>
+                                     <tr >
+                                        <td style="width: 35%; height: 100%" align="left" >
+                                            <span id="lblSo_mon" style="font-size:Small;font-weight:bold;">Số học phần đã đăng ký: 3</span><strong></strong></td>
+                                        <td style="width: 35%; height: 100%" align="center" >
+                                            <strong></strong></td>
+                                        <td style="width: 30%; height: 100%" align="right" >
+                                            <span id="lblSo_tin_chi" style="font-size:Small;font-weight:bold;">Tổng số tín chỉ đã đăng ký: 10</span></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>            
+                        <tr style="font-size: 10pt">
+                            <td style="width: 100%; height: 100%;" colspan = 3>
+                                <div>
+	<table class="GridViewStyle" cellspacing="1" cellpadding="1" rules="all" border="1" id="grdViewMonDangKy" style="width:100%;">
+		<tr class="HeaderStyle">
+			<th scope="col">HP ng&#224;nh 2</th><th scope="col">Điểm chữ</th><th scope="col">M&#227; học phần</th><th scope="col">T&#234;n học phần</th><th scope="col">Số t&#237;n chỉ</th><th scope="col">Hệ số</th><th scope="col">Số tiền học ph&#237;</th><th scope="col">Ràng buộc học phần</th><th scope="col">Bắt buộc</th><th scope="col">Tự chọn</th><th scope="col">C&#242;n trống</th><th scope="col">Đăng ký học</th>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B+</td><td align="center" style="width:10%;">POLI 106</td><td style="width:27%;">Chủ nghĩa x&#227; hội khoa học (POLI 106-K72)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">2651</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl02_chk" type="checkbox" name="grdViewMonDangKy$ctl02$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B</td><td align="center" style="width:10%;">PHIL 128</td><td style="width:27%;">Dẫn luận NNH v&#224; Ngữ &#226;m học TV (PHIL 128-K72 Văn học)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">20</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl03_chk" type="checkbox" name="grdViewMonDangKy$ctl03$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B</td><td align="center" style="width:10%;">PHIL 128</td><td style="width:27%;">Dẫn luận NNH v&#224; Ngữ &#226;m học TV (PHIL 128-K72SP Văn)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">142</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl04_chk" type="checkbox" name="grdViewMonDangKy$ctl04$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B</td><td align="center" style="width:10%;">PHIL 128</td><td style="width:27%;">Dẫn luận NNH v&#224; Ngữ &#226;m học TV (PHIL 128-K72SP VănCLC)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">14</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl05_chk" type="checkbox" name="grdViewMonDangKy$ctl05$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B+</td><td align="center" style="width:10%;">COMM 005</td><td style="width:27%;">Đ&#225;nh gi&#225; trong gi&#225;o dục (COMM 005-K70)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">Tiên quyết : Giáo dục học<br>Tiên quyết : Lý luận dạy học</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">55</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl06_chk" type="checkbox" name="grdViewMonDangKy$ctl06$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250BC</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (B&#243;ng chuyền) (PHYE 250BC-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">284</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl07_chk" type="checkbox" name="grdViewMonDangKy$ctl07$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250BD</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (B&#243;ng đ&#225;) (PHYE 250BD-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">56</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl08_chk" type="checkbox" name="grdViewMonDangKy$ctl08$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250BR</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (B&#243;ng rổ) (PHYE 250BR-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">66</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl09_chk" type="checkbox" name="grdViewMonDangKy$ctl09$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250CL</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (Cầu l&#244;ng) (PHYE 250CL-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">178</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl10_chk" type="checkbox" name="grdViewMonDangKy$ctl10$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250ĐC</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (Đ&#225; cầu) (PHYE 250ĐC-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">62</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl11_chk" type="checkbox" name="grdViewMonDangKy$ctl11$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250ĐK</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (Điền kinh) (PHYE 250ĐK-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">138</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl12_chk" type="checkbox" name="grdViewMonDangKy$ctl12$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250KV</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (Khi&#234;u vũ) (PHYE 250KV-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">77</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl13_chk" type="checkbox" name="grdViewMonDangKy$ctl13$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B</td><td align="center" style="width:10%;">PHYE 250TD</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (Thể dục nhịp điệu) (PHYE 250TD-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">293</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl14_chk" type="checkbox" name="grdViewMonDangKy$ctl14$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHYE 250V</td><td style="width:27%;">Gi&#225;o dục thể chất 3 (V&#245; thuật) (PHYE 250V-K72)</td><td align="center" style="width:5%;">1</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">57</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl15_chk" type="checkbox" name="grdViewMonDangKy$ctl15$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B+</td><td align="center" style="width:10%;">POLI 204</td><td style="width:27%;">Lịch sử Đảng Cộng sản Việt Nam (POLI 204-K72)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">321</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl16_chk" type="checkbox" name="grdViewMonDangKy$ctl16$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">C</td><td align="center" style="width:10%;">COMM 110</td><td style="width:27%;">Lịch sử văn minh thế giới (COMM 110-K72,70)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">2</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl17_chk" type="checkbox" name="grdViewMonDangKy$ctl17$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">D+</td><td align="center" style="width:10%;">PHIL 221N</td><td style="width:27%;">Nhập m&#244;n L&#237; luận văn học (PHIL 221N-K72 Văn học)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">33</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl18_chk" type="checkbox" name="grdViewMonDangKy$ctl18$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">COMM 004</td><td style="width:27%;">Ph&#225;t triển chương tr&#236;nh nh&#224; trường (COMM 004-K70)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">Tiên quyết : Giáo dục học</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">2081</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl19_chk" type="checkbox" name="grdViewMonDangKy$ctl19$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B</td><td align="center" style="width:10%;">COMM 001</td><td style="width:27%;">R&#232;n luyện NVSP thường xuy&#234;n (COMM 001-K72)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">131</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl20_chk" type="checkbox" name="grdViewMonDangKy$ctl20$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B+</td><td align="center" style="width:10%;">PSYC 101</td><td style="width:27%;">T&#226;m l&#237; học gi&#225;o dục (PSYC 101-K70)</td><td align="center" style="width:5%;">4</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">114</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl21_chk" type="checkbox" name="grdViewMonDangKy$ctl21$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">C+</td><td align="center" style="width:10%;">MATH 137</td><td style="width:27%;">Thống k&#234; x&#227; hội học (MATH 137-K70)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">71</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl22_chk" type="checkbox" name="grdViewMonDangKy$ctl22$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHIL 316N</td><td style="width:27%;">Tiến tr&#236;nh văn học (PHIL 316N-K70SP Văn)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">18</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl23_chk" type="checkbox" name="grdViewMonDangKy$ctl23$chk" checked="checked" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">ENGL 105</td><td style="width:27%;">Tiếng Anh 2-A1 (ENGL 105-K72)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">900</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl24_chk" type="checkbox" name="grdViewMonDangKy$ctl24$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">ENGL 106</td><td style="width:27%;">Tiếng Anh 2-A2 (ENGL 106-K72)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">441</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl25_chk" type="checkbox" name="grdViewMonDangKy$ctl25$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">RUSS 106</td><td style="width:27%;">Tiếng Nga 2 (RUSS 106-K72)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">50</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl26_chk" type="checkbox" name="grdViewMonDangKy$ctl26$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">FREN 106</td><td style="width:27%;">Tiếng Ph&#225;p 2 (FREN 106-K72)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">92</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl27_chk" type="checkbox" name="grdViewMonDangKy$ctl27$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B</td><td align="center" style="width:10%;">CHIN 106</td><td style="width:27%;">Tiếng Trung 2 (CHIN 106-K72)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">922</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl28_chk" type="checkbox" name="grdViewMonDangKy$ctl28$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">C</td><td align="center" style="width:10%;">COMP 103</td><td style="width:27%;">Tin học đại cương (COMP 103-K72)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">0</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">1140</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl29_chk" type="checkbox" name="grdViewMonDangKy$ctl29$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHIL 309</td><td style="width:27%;">Trải nghiệm hoạt động dạy học (PHIL 309-K70SP Văn)</td><td align="center" style="width:5%;">3</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">0</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl30_chk" type="checkbox" name="grdViewMonDangKy$ctl30$chk" checked="checked" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B+</td><td align="center" style="width:10%;">POLI 202</td><td style="width:27%;">Tư tưởng Hồ Ch&#237; Minh (POLI 202-K70)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">50</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl31_chk" type="checkbox" name="grdViewMonDangKy$ctl31$chk" />
+                                                                 
+                                            </td>
+		</tr><tr class="RowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:10%;">PHIL 306N</td><td style="width:27%;">Văn học Việt Nam từ sau C&#225;ch mạng th&#225;ng T&#225;m 1945 (PHIL 306N-K70SP Văn)</td><td align="center" style="width:5%;">4</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">13</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl32_chk" type="checkbox" name="grdViewMonDangKy$ctl32$chk" checked="checked" />
+                                                                 
+                                            </td>
+		</tr><tr class="AltRowStyle">
+			<td align="center" style="width:5%;">&nbsp;</td><td align="center" style="width:3%;">B+</td><td align="center" style="width:10%;">COMM 109</td><td style="width:27%;">X&#227; hội học đại cương (COMM 109-K70)</td><td align="center" style="width:5%;">2</td><td align="center" style="width:5%;">1</td><td align="right" style="width:8%;">0</td><td style="width:22%;">&nbsp;</td><td align="center" style="width:3%;">X</td><td align="center" style="width:3%;">&nbsp;</td><td align="center" style="width:3%;">172</td><td align="center" style="width:5%;">                                    
+                                                <input id="grdViewMonDangKy_ctl33_chk" type="checkbox" name="grdViewMonDangKy$ctl33$chk" />
+                                                                 
+                                            </td>
+		</tr>
+	</table>
+</div>
+                            </td>
+                        </tr>           
+                        <tr style="font-size: 10pt">
+                            <td align="left" colspan="1">
+                            <BUTTON class="btn btn-success"  onclick="OpenWindows()" type="button"><span id="Label1">In kết quả đã đăng ký</span></BUTTON>
+                            </td>
+                            <td align ="right" colspan = 3>
+                        <input type="submit" name="cmdDangKyLop2" value="Đăng ký lớp tín chỉ" id="cmdDangKyLop2" class="btn btn-success" />
+                      
+                        </td></tr>
+                    </table>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+             </div>
+          <div class="row">
+                
+<div class ="pageFooter">
+    <div class="row">
+        <div class="col-md-2" style="vertical-align:middle">
+            <a href="http://thienan.vn" style="border-style:none;"><img src="/images/logo_thienan.jpg" border="0"/></a>
+        </div>
+        <div class="col-md-8">
+            <div class="col-xs-12 hidden visible-md visible-lg visible-xl">
+                Copyright ©2017 Trường Đại học Sư phạm Hà Nội<br />
+                Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="http://thienan.vn" style=" border-style:none">Thiên An</a> </td>
+            </div>
+        </div>
+         <div class="col-md-2">
+             <div class="col-xs-12 hidden visible-md visible-lg visible-xl">
+                 Sinh viên Online: 89<br />
+                Khách Online: 29
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

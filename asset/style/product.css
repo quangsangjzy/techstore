@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hide{
+    display: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.addCart{
+    cursor: pointer;
+}
+
+section {
+    background-color: #fff;
+}
+
+.heading-product {
+    color: #303131;
+    font-family: "Red Hat Display", Sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.product{
+    position: relative;
+}
+
+
+.product .card-body a{
+    text-decoration: none;
+} 
+
+/* thong tin san pham */
+
+#mainProductDetail{
+    width: 1000px;
+    margin: auto;
+    padding-top: 250px;
+    padding-bottom: 80px;
+}
+
+#mainProductDetail .card{
+    border: none;
+}
+
+#mainProductDetail .back a{
+    font-size: 18px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+#card{
+    display: flex;
+    width: 1000px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#card .spinner-border{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 450px;
+}
+
+#card-body{
+   margin: 10px;
+   padding-bottom: 80px;
+   width: 250px;
+   position: relative;
+}
+
+#card-body .row1{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+#card-body .row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#card-body .row2 h6{
+    margin-right: -10px;
+}
+
+#card-body .row1 i{
+    font-size: 25px;
+}
+
+#card-body .row1 i:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#card-body .row1 i:hover #box-info{
+    display: inline-block;
+}
+
+#card-body .row2 i:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#card img{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+}
+
+#card #box-info{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    width: 250px;
+    color: #fff;
+    padding: 15px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    top: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+/* .row1 i:hover .box-info{
+    display: none;
+} */
+
+p.p-addCart {
+    position: absolute;
+    color: #fff;
+    right: 70px;
+    /* top: 27px; */
+    line-height: 40px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.btnAddCart {
+    background: #676767;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    color: #fff;
+    /* line-height: 40px;
+    padding-left: 40px; */
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnAddCart:hover{
+    background: #d24d4d;
+}
+
+/* Tìm kiéme */
+
+.hienthiTimKiem{
+    background: #e8e8e8;
+    width: 330px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 31px;
+    overflow: auto;
+}
+
+.hienthiTimKiem .productTimKiem{
+    border-bottom: 1px solid #000;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.hienthiTimKiem .productTimKiem .imgTimKiem{
+    width: 50px;
+    margin-right: 20px;
+}
+
+.hienthiTimKiem .productTimKiem .row{
+    padding-top: 3px;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.hienthiTimKiem .productTimKiem .giasp{
+    color: red;
+}
+
+.overlayTimKiem{
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: 205px;
+}
+
+.feedback{
+    display: flex;
+    flex-direction: row;
+    /* width: 450px; */
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+.feedback .phanhoi{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+.feedback h3{
+    text-align: center;
+}
+
+.feedback input{
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.feedback button{
+    border: none;
+    padding: 10px;
+    background: #3658c9;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.feedback .map{
+    width: 50%;
+}
+
+/* .boxAbout {
+    padding: 0 170px;
+} */
+
+.boxAbout .display-4{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.boxAbout .lead{
+    align-items: center;
+}
+
+#thanhtoan {
+    width: 100%;
+    height: 40px;
+    /* padding-top: 20px; */
+    margin-top: 20px;
+    border: 1px solid #ced4da;
+}
